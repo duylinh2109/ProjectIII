@@ -20,7 +20,7 @@ public class SmartFoxLogin : MonoBehaviour
     private int WSPort = 8888;
 
     [Tooltip("Name of the SmartFoxServer 2X Zone to join")]
-    private string Zone = "TestProject4";
+    private string Zone = "BasicExamples";
 
     public GameObject UILogin;
 
@@ -143,7 +143,7 @@ public class SmartFoxLogin : MonoBehaviour
     private void OnLogin(BaseEvent evt)
     {
         Debug.Log("Logged into MainLobby");
-        Application.LoadLevel("MainLobby");
+        Application.LoadLevel("WaitingRoom");
         //sfs.Send(new JoinRoomRequest("Lobby"));
     }
 

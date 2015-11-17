@@ -1,34 +1,44 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 public class LobbyController : MonoBehaviour
 {
-    public GameObject exitLobby;
-    public GameObject createRoom;
+    public GameObject ready;
+    public GameObject leave;
+    public GameObject cancel;
+    public GameObject start;
+    public GameObject smartFoxRoomCtrl;
 
-    public GameObject smartFoxLobby;
-
-    // Hàm chọn exit lobby
-    public void clickExitLobby()
+    //Hàm chọn ready
+    public void clickReady()
     {
-        Application.Quit();
-        Debug.Log("Out Lobby");
+        ready.SetActive(false);
+        cancel.SetActive(true);
+        smartFoxRoomCtrl.GetComponent<SmartFoxLobby>().Ready();
+        //Application.LoadLevel("Game");
     }
 
-    //Hàm chọn Create Room
-    public void clickCreateRoom()
+    public void clickStart()
     {
-        smartFoxLobby.GetComponent<SmartFoxLobby>().createRoom();
-        //Application.LoadLevel("MainRoom");
+        smartFoxRoomCtrl.GetComponent<SmartFoxLobby>().StartGame();
+        //Application.LoadLevel("Game");
     }
 
-    public void clickSendMessage()
+    public void clickCancel()
     {
-        smartFoxLobby.GetComponent<SmartFoxLobby>().SendPublicMessage();
+        ready.SetActive(true);
+        cancel.SetActive(false);
+        smartFoxRoomCtrl.GetComponent<SmartFoxLobby>().Cancel();
+        //Application.LoadLevel("Game");
     }
 
-    public void clickJoinRoom()
+    //Hàm chọn leave
+    public void clickLeave()
     {
-        GameObject.Find("SmartFoxLobbyController").GetComponent<SmartFoxLobby>().JoinRoom(this.transform.Find("Text").GetComponent<Text>().text);
+        //Application.LoadLevel("MainLobby");
+    }
+
+    public void clickSend()
+    {
+        smartFoxRoomCtrl.GetComponent<SmartFoxLobby>().SendPublicMessage();
     }
 }
