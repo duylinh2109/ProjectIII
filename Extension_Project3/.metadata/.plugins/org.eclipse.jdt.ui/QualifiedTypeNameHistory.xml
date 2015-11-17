@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.smartfoxserver.v2.extensions.SFSExtension"/>
+<fullyQualifiedTypeName name="com.smartfoxserver.v2.entities.User"/>
+<fullyQualifiedTypeName name="com.smartfoxserver.v2.entities.Room"/>
+<fullyQualifiedTypeName name="com.smartfoxserver.v2.core.SFSEventType"/>
+<fullyQualifiedTypeName name="eventHandler.LoginEventHandler"/>
+<fullyQualifiedTypeName name="com.smartfoxserver.v2.extensions.BaseServerEventHandler"/>
+</qualifiedTypeNameHistroy>
