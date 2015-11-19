@@ -233,10 +233,10 @@ public class SmartFoxLobby : MonoBehaviour
             case ConfigResponseCmd.cmd_playerready:
                 break;
 
-            case ConfigResponseCmd.cmd_startgame:
+            case ConfigResponseCmd.cmd_playerstart:
                 sfs.RemoveAllEventListeners();
 
-                Application.LoadLevel("Game");
+                Application.LoadLevel("FullMap");
                 break;
         }
     }
@@ -262,7 +262,8 @@ public class SmartFoxLobby : MonoBehaviour
 
     public void StartGame()
     {
-        
+        ISFSObject param = new SFSObject();
+        sfs.Send(new ExtensionRequest(ConfigRequestCmd.cmd_playerstart,param,sfs.LastJoinedRoom));
     }
 
     public void Cancel()

@@ -84,12 +84,9 @@ public class SmartFoxWaitingRoom : MonoBehaviour
         settings.MaxSpectators = 0;
         //settings.MaxSpectators = 0;
 
-        //settings.Extension = new RoomExtension(EXTENSION_ID, EXTENSION_CLASS);
+        settings.Extension = new RoomExtension(EXTENSION_ID, EXTENSION_CLASS);
 
         // Request Game Room creation to server
-
-        
-
         sfs.Send(new CreateRoomRequest(settings, true, sfs.LastJoinedRoom));
         
         Debug.Log("Created Room");
