@@ -284,15 +284,15 @@ public class SmartFoxLobby : MonoBehaviour
 
     public void LoadCard()
     {
-        Sprite[] ol = Resources.LoadAll<Sprite>("Textures/Cards");
-        foreach(Sprite i in ol)
-        {
-            GameObject go = Instantiate(unitCard,Vector3.zero,Quaternion.identity) as GameObject;
-            go.transform.SetParent(unitList.transform);
-            go.transform.localScale = new Vector3(1, 1, 1);
-            go.transform.localPosition = new Vector3(go.transform.position.x, go.transform.position.y, 0);
-            go.GetComponent<Image>().sprite = i;
-        }
+        //Sprite[] ol = Resources.LoadAll<Sprite>("Textures/Cards");
+        //foreach(Sprite i in ol)
+        //{
+        //    GameObject go = Instantiate(unitCard,Vector3.zero,Quaternion.identity) as GameObject;
+        //    go.transform.SetParent(unitList.transform);
+        //    go.transform.localScale = new Vector3(1, 1, 1);
+        //    go.transform.localPosition = new Vector3(go.transform.position.x, go.transform.position.y, 0);
+        //    go.GetComponent<Image>().sprite = i;
+        //}
     }
 
     public void LoadMap()
