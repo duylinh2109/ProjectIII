@@ -1,0 +1,36 @@
+package my.ass;
+
+
+import com.smartfoxserver.v2.entities.Room;
+import com.smartfoxserver.v2.entities.User;
+import com.smartfoxserver.v2.entities.data.ISFSObject;
+import com.smartfoxserver.v2.entities.data.SFSObject;
+import com.smartfoxserver.v2.extensions.BaseClientRequestHandler;
+
+public class OnUserSurrenderHandler extends BaseClientRequestHandler {
+
+	@Override
+	public void handleClientRequest(User sender, ISFSObject params) {
+		// TODO Auto-generated method stub
+		trace("Receive Surrender cmd");
+	    TrisExtension gameExt = (TrisExtension) getParentExtension();
+		Room gameRoom = gameExt.getGameRoom();
+		
+	
+		ISFSObject resObj = SFSObject.newInstance();
+		resObj.putUtfString("n","123");
+		resObj.putInt("id", 123);
+		
+		
+		if (sender.isPlayer())
+		{
+			// Checks if two players are available and start game
+			if (gameExt.getGameRoom().getSize().getUserCount() == 2)
+			{
+				gameExt.surrender();
+				send("surrender", resObj, gameRoom.getUserList());
+			}
+		}	
+	}
+
+}

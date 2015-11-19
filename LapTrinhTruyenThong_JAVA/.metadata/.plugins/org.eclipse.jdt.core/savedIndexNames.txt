@@ -1,0 +1,27 @@
+INDEX VERSION 1.126+C:\Users\DUYLINH\Desktop\GITHUB\ProjectIII\LapTrinhTruyenThong_JAVA\.metadata\.plugins\org.eclipse.jdt.core
+3257624810.index
+3790339240.index
+3344972897.index
+2239501400.index
+662040672.index
+3048866735.index
+3649877462.index
+3398470161.index
+3617550082.index
+3118613296.index
+1005558033.index
+3933528179.index
+949129459.index
+2933348475.index
+1141335074.index
+3930732134.index
+1779871142.index
+3391787214.index
+3016043273.index
+2483681386.index
+2987252185.index
+2780512592.index
+664394358.index
+1275039251.index
+168125632.index
+3341882286.index
